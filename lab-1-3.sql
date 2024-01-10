@@ -2,6 +2,12 @@
 
 -- Expected result:
 --
+
+select year, name, losses, wins
+from teams 
+order by losses DESC
+limit 3;
+
 -- +------+----------------------+------+--------+
 -- | 1899 | Cleveland Spiders    | 20   | 134    |
 -- | 1962 | New York Mets.       | 40   | 120    |
