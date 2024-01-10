@@ -2,7 +2,12 @@
 -- Challenge: Try to include the team's name in the results. Is it accurate?
 
 -- Expected result: 61 rows, starting with
---
+
+select year, max(wins) from teams
+where year > 1959
+group by year
+order by max(wins) desc;
+
 -- +------+-------------------------------+-----------+
 -- | 2001 | Seattle Mariners              | 116       |
 -- | 1998 | New York Yankees              | 114       |
