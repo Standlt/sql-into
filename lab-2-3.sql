@@ -2,6 +2,10 @@
 
 -- Expected result:
 --
+select year, name from teams
+where park="U.S. Cellular Field"
+order by year DESC
+limit 1;
 -- +------+-------------------+
 -- | 2017 | Chicago White Sox |
 -- +------+-------------------+
