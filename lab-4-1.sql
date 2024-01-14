@@ -1,9 +1,10 @@
 -- How many lifetime hits does Barry Bonds have?
 
 
-select * from players
-where first_name ="Barry" 
-AND last_name="Bonds";
+select sum(stats.hits) from stats
+inner join players on players.id = stats.player_id
+where players.first_name ="Barry" 
+AND players.last_name ="Bonds";
 
 -- count (stats) or (*) in table stats
 -- select frist name & last name from table players
